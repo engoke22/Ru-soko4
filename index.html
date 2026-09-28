@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f68b1e"><meta name="description" content="RU Soko – buy and sell with sellers you can trust. Verified sellers, honest reviews.">
+<link rel="manifest" href="/manifest.webmanifest"><link rel="icon" type="image/png" href="/icons/favicon.png"><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="RU Soko"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:title" content="RU Soko"><meta property="og:description" content="Shop and sell with sellers you can trust."><meta property="og:type" content="website">
+<title>RU Soko – Shop, Sell, Trust</title>
+<style>
+:root{--bg:#f1f1f2;--card:#fff;--tx:#282828;--mu:#75757a;--br:#f68b1e;--br2:#e07b10;--ok:#0a8f3c;--bad:#c62828;--bd:#e5e5e5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151515;--card:#222;--tx:#eee;--mu:#a0a0a5;--bd:#383838}}
+:root[data-theme="dark"]{--bg:#151515;--card:#222;--tx:#eee;--mu:#a0a0a5;--bd:#383838}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.top{max-width:1180px;margin:auto;display:flex;gap:12px;align-items:center;padding:10px 14px;flex-wrap:wrap}
+.logo{font-weight:900;font-size:24px;color:var(--br);letter-spacing:-1px;cursor:pointer}
+.logo small{color:var(--tx);font-weight:700}
+.search{flex:1;min-width:200px;display:flex}
+.search input{flex:1;padding:11px 14px;border:1px solid var(--bd);border-radius:6px 0 0 6px;background:var(--bg);color:var(--tx);font-size:15px}
+.btn{background:var(--br);color:#fff;border:0;padding:11px 18px;border-radius:6px;font-weight:700;cursor:pointer;font-size:14px}
+.btn:hover{background:var(--br2)}.search .btn{border-radius:0 6px 6px 0}
+.btn.o{background:transparent;color:var(--br);border:1px solid var(--br)}.btn.g{background:var(--ok)}.btn.r{background:var(--bad)}
+.nav a{margin-left:14px;font-size:14px;font-weight:600;cursor:pointer;color:var(--tx)}
+main{max-width:1180px;margin:auto;padding:14px}
+.grid2{display:grid;grid-template-columns:210px 1fr;gap:14px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}.side{display:none}}
+.box{background:var(--card);border-radius:6px;padding:12px;border:1px solid var(--bd)}
+.side a{display:block;padding:9px 6px;font-size:14px;cursor:pointer;border-bottom:1px solid var(--bd)}.side a:hover,.side a.on{color:var(--br);font-weight:700}
+.hero{background:linear-gradient(120deg,#f68b1e,#ffb347);color:#fff;border-radius:6px;padding:28px 22px;margin-bottom:14px}
+.hero h1{margin:0 0 6px;font-size:26px}.hero p{margin:0;opacity:.95}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:10px}.chips span{white-space:nowrap;background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:6px 14px;font-size:13px;cursor:pointer}.chips span.on{background:var(--br);color:#fff;border-color:var(--br)}
+h2{font-size:17px;margin:4px 0 10px}
+.prods{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.p{background:var(--card);border-radius:6px;border:1px solid var(--bd);overflow:hidden;cursor:pointer;transition:box-shadow .15s}.p:hover{box-shadow:0 3px 12px rgba(0,0,0,.15)}
+.img{height:130px;display:flex;align-items:center;justify-content:center;font-size:58px}
+.pi{padding:10px}.pn{font-size:14px;height:36px;overflow:hidden}.pr{font-weight:800;font-size:16px;margin-top:4px}
+.old{color:var(--mu);text-decoration:line-through;font-size:12px;font-weight:400;margin-left:4px}.disc{background:#fdeed9;color:var(--br2);font-size:11px;padding:2px 5px;border-radius:3px;font-weight:700}
+.st{color:#f5a300;letter-spacing:1px}.mu{color:var(--mu);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:10px;font-weight:700;display:inline-block}.v{background:#e0f5e8;color:var(--ok)}.u{background:#fde4e4;color:var(--bad)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-start;justify-content:center;overflow:auto;z-index:20;padding:20px 10px}
+.modal.on{display:flex}.mc{background:var(--card);border-radius:8px;max-width:760px;width:100%;padding:18px;position:relative}
+.x{position:absolute;right:12px;top:8px;font-size:26px;cursor:pointer;color:var(--mu)}
+.pd{display:grid;grid-template-columns:200px 1fr;gap:16px}@media(max-width:600px){.pd{grid-template-columns:1fr}}
+.pd .img{height:200px;font-size:96px;background:var(--bg);border-radius:6px}
+.warn{background:#fff4e5;border:2px solid #ff9800;color:#5d3a00;border-radius:6px;padding:12px;margin:10px 0;font-size:14px}
+:root[data-theme="dark"] .warn{background:#3a2a10;color:#ffd699}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:inherit;margin:4px 0 8px}
+label{font-size:13px;font-weight:600}
+.rev{border-top:1px solid var(--bd);padding:10px 0}
+.stars span{font-size:28px;cursor:pointer;color:#ccc}.stars span.on{color:#f5a300}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:8px;border-bottom:1px solid var(--bd);text-align:left}
+footer{text-align:center;color:var(--mu);font-size:12px;padding:24px}
+</style></head><body>
+<header><div class="top">
+<div class="logo" onclick="home()">RU <small>Soko</small></div>
+<div class="search"><input id="q" placeholder="Search products, brands and categories" oninput="render()"><button class="btn">SEARCH</button></div>
+<div class="nav"></div>
+</div></header>
+<main>
+<div class="hero"><h1>Everything you need, from sellers you can trust</h1><p>Look for the green ✔ Verified badge. Pay sellers directly – safely.</p></div>
+<div class="grid2">
+<aside class="side box" id="side"></aside>
+<section><div class="chips" id="chips"></div><h2 id="ttl">Top Deals</h2><div class="prods" id="prods"></div></section>
+</div></main>
+<footer>© RU Soko · Payments are made directly between buyer and seller. Verification is done by RU Soko admins only.</footer>
+
+<div class="modal" id="m"><div class="mc"><span class="x" onclick="closeM()">×</span><div id="mb"></div></div></div>
+
+<script>
+const CATS=["All","Phones & Tablets","Electronics","Fashion","Home & Kitchen","Beauty","Groceries","Services"];
+const ADMIN_PIN="RUSOKO-ADMIN"; // prototype only – see note in chat
+let S=load();
+function load(){try{const s=JSON.parse(localStorage.getItem("rusoko")||"null");if(s)return s}catch(e){}
+return seed()}
+function save(){try{localStorage.setItem("rusoko",JSON.stringify(S))}catch(e){}}
+function seed(){return{sellers:[
+{id:1,name:"TechHub Nairobi",phone:"+254700000001",verified:true},
+{id:2,name:"Mama Njeri Fashions",phone:"+254700000002",verified:true},
+{id:3,name:"QuickDeals Ltd",phone:"+254700000003",verified:false},
+{id:4,name:"HomeNest",phone:"+254700000004",verified:false}],
+products:[
+{id:1,n:"Smartphone 6.5\" 128GB",c:"Phones & Tablets",p:18500,o:22000,e:"📱",s:1,d:"Dual SIM, 5000mAh battery, 50MP camera. 1 year warranty."},
+{id:2,n:"Wireless Earbuds Pro",c:"Electronics",p:2200,o:3500,e:"🎧",s:1,d:"Bluetooth 5.3, noise reduction, 24h battery with case."},
+{id:3,n:"Ankara Maxi Dress",c:"Fashion",p:1800,o:2500,e:"👗",s:2,d:"Handmade ankara print, sizes S–XXL."},
+{id:4,n:"Men's Running Shoes",c:"Fashion",p:2999,o:4200,e:"👟",s:2,d:"Breathable mesh, lightweight sole."},
+{id:5,n:"Non-stick Cookware Set",c:"Home & Kitchen",p:4500,o:6000,e:"🍳",s:4,d:"7-piece set, induction friendly."},
+{id:6,n:"32\" LED TV",c:"Electronics",p:15900,o:19900,e:"📺",s:3,d:"HD ready, HDMI x2, USB. Free wall bracket."},
+{id:7,n:"Body Lotion 400ml",c:"Beauty",p:650,o:900,e:"🧴",s:3,d:"Shea butter moisturising lotion."},
+{id:8,n:"Home Cleaning Service",c:"Services",p:2500,o:0,e:"🧹",s:4,d:"Professional 3-hour cleaning visit."},
+{id:9,n:"Basmati Rice 5kg",c:"Groceries",p:980,o:1200,e:"🍚",s:2,d:"Premium long grain."},
+{id:10,n:"Laptop 15.6\" 8GB/256GB",c:"Electronics",p:52000,o:60000,e:"💻",s:1,d:"Core i5, SSD, backlit keyboard."}],
+reviews:[
+{pid:1,name:"Achieng",r:5,t:"Genuine phone, arrived as described. Seller was quick to respond."},
+{pid:6,name:"Brian",r:3,t:"TV works fine but delivery took longer than promised."}],
+admin:false,cat:"All"}}
+const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const KES=n=>"KSh "+Number(n).toLocaleString();
+const seller=id=>S.sellers.find(s=>s.id==id)||{name:"Unknown",verified:false};
+const revs=pid=>S.reviews.filter(r=>r.pid==pid);
+const avg=pid=>{const r=revs(pid);return r.length?r.reduce((a,b)=>a+b.r,0)/r.length:0};
+const stars=n=>"★".repeat(Math.round(n))+"☆".repeat(5-Math.round(n));
+function home(){S.cat="All";$("q").value="";render()}
+function render(){
+$("side").innerHTML="<b>Categories</b>"+CATS.map(c=>`<a class="${S.cat==c?'on':''}" onclick="setCat('${c}')">${c}</a>`).join("");
+$("chips").innerHTML=CATS.map(c=>`<span class="${S.cat==c?'on':''}" onclick="setCat('${c}')">${c}</span>`).join("");
+const q=$("q").value.toLowerCase();
+const list=S.products.filter(p=>(S.cat=="All"||p.c==S.cat)&&(p.n+p.c+seller(p.s).name).toLowerCase().includes(q));
+$("ttl").textContent=(S.cat=="All"?"Top Deals":S.cat)+" ("+list.length+")";
+$("prods").innerHTML=list.map(p=>{const s=seller(p.s),a=avg(p.id),d=p.o?Math.round((1-p.p/p.o)*100):0;
+return `<div class="p" onclick="openP(${p.id})"><div class="img">${p.e}</div><div class="pi"><div class="pn">${esc(p.n)}</div>
+<div class="pr">${KES(p.p)}${p.o?`<span class="old">${KES(p.o)}</span>`:""}</div>${d?`<span class="disc">-${d}%</span>`:""}
+<div><span class="st">${a?stars(a):"☆☆☆☆☆"}</span> <span class="mu">(${revs(p.id).length})</span></div>
+<div style="margin-top:4px"><span class="badge ${s.verified?'v':'u'}">${s.verified?"✔ Verified":"Not verified"}</span></div></div></div>`}).join("")||"<p class='mu'>No products found.</p>"}
+function setCat(c){S.cat=c;save();render()}
+function showM(h){$("mb").innerHTML=h;$("m").classList.add("on")}
+function closeM(){$("m").classList.remove("on")}
+function openP(id){const p=S.products.find(x=>x.id==id),s=seller(p.s),a=avg(id);
+showM(`<div class="pd"><div class="img">${p.e}</div><div><h2 style="font-size:20px">${esc(p.n)}</h2>
+<div><span class="st">${a?stars(a):"No ratings yet"}</span> <span class="mu">${a?a.toFixed(1)+" · ":""}${revs(id).length} review(s)</span></div>
+<div class="pr" style="font-size:24px;margin:8px 0">${KES(p.p)}${p.o?`<span class="old">${KES(p.o)}</span>`:""}</div>
+<p>${esc(p.d)}</p><div class="mu">Category: ${esc(p.c)}</div>
+<p><b>Seller:</b> ${esc(s.name)} <span class="badge ${s.verified?'v':'u'}">${s.verified?"✔ Verified by RU Soko":"Not verified"}</span></p>
+<button class="btn" onclick="buy(${id})">BUY / CONTACT SELLER</button></div></div>
+<h2 style="margin-top:18px">Customer reviews</h2>
+${revs(id).map(r=>`<div class="rev"><span class="st">${stars(r.r)}</span> <b>${esc(r.name)}</b><div>${esc(r.t)}</div></div>`).join("")||"<p class='mu'>Be the first to review this product.</p>"}
+<h2 style="margin-top:14px">Write a review</h2>
+<div class="stars" id="stars">${[1,2,3,4,5].map(i=>`<span onclick="setR(${i})">★</span>`).join("")}</div>
+<input id="rn" placeholder="Your name" maxlength="40"><textarea id="rt" rows="3" placeholder="Share your experience…" maxlength="500"></textarea>
+<button class="btn o" onclick="addRev(${id})">Submit review</button>`)}
+let R=0;function setR(n){R=n;document.querySelectorAll("#stars span").forEach((e,i)=>e.classList.toggle("on",i<n))}
+function addRev(id){const n=$("rn").value.trim(),t=$("rt").value.trim();if(!R||!n||!t){alert("Please add stars, your name and a written review.");return}
+S.reviews.push({pid:id,name:n,r:R,t});R=0;save();render();openP(id)}
+function buy(id){const p=S.products.find(x=>x.id==id),s=seller(p.s);
+const w=s.verified?`<div class="warn" style="background:#e9f7ee;border-color:var(--ok);color:#0a5a26">✔ This seller is verified by RU Soko admins. Still, only pay after you are comfortable with the deal.</div>`
+:`<div class="warn"><b>⚠ Scam warning – seller NOT verified</b><br>RU Soko has not verified <b>${esc(s.name)}</b>. Payments go directly to the seller and cannot be reversed by us. Never pay in advance for items you haven't seen, prefer pay-on-delivery or meeting in a public place, and don't share your PIN or passwords.<br><label style="display:flex;gap:8px;align-items:center;margin-top:8px"><input type="checkbox" id="ack" style="width:auto;margin:0" onchange="$('go').disabled=!this.checked"> I understand the risk and want to continue.</label></div>`;
+showM(`<h2>Pay seller directly</h2><p><b>${esc(p.n)}</b> · ${KES(p.p)}</p>${w}
+<div class="box"><b>${esc(s.name)}</b><br>Phone / M-Pesa: <b>${esc(s.phone||"")}</b><p class="mu">Agree on delivery with the seller, then pay them directly (e.g. M-Pesa). RU Soko does not process payments yet.</p></div>
+<p><button class="btn g" id="go" ${s.verified?"":"disabled"} onclick="location.href='tel:${esc(s.phone||"")}'">📞 Call seller to proceed</button> <button class="btn o" onclick="openP(${id})">Back</button></p>`)}
+function openSell(){showM(`<h2>Sell on RU Soko</h2><p class="mu">New sellers start as “Not verified”. An admin verifies you after checking your details.</p>
+<label>Business / seller name</label><input id="sn"><label>Phone (M-Pesa)</label><input id="sp" placeholder="+2547…">
+<label>Product / service name</label><input id="pn"><label>Category</label><select id="pc">${CATS.slice(1).map(c=>`<option>${c}</option>`).join("")}</select>
+<label>Price (KSh)</label><input id="pp" type="number" min="1"><label>Description</label><textarea id="pd" rows="3"></textarea>
+<button class="btn" onclick="addProd()">List item</button>`)}
+function addProd(){const n=$("sn").value.trim(),ph=$("sp").value.trim(),pn=$("pn").value.trim(),pr=+$("pp").value;
+if(!n||!ph||!pn||!(pr>0)){alert("Please fill all fields.");return}
+let s=S.sellers.find(x=>x.name.toLowerCase()==n.toLowerCase());
+if(!s){s={id:Date.now(),name:n,phone:ph,verified:false};S.sellers.push(s)}
+const em={"Phones & Tablets":"📱",Electronics:"🔌",Fashion:"👕","Home & Kitchen":"🏠",Beauty:"💄",Groceries:"🛒",Services:"🛠️"}[$("pc").value];
+S.products.unshift({id:Date.now()+1,n:pn,c:$("pc").value,p:pr,o:0,e:em,s:s.id,d:$("pd").value.trim()||"No description."});
+save();render();closeM()}
+function openAdmin(){if(!S.admin){showM(`<h2>Admin login</h2><input id="ap" type="password" placeholder="Admin passcode"><button class="btn" onclick="login()">Login</button>`);return}adminPanel()}
+function login(){if($("ap").value===ADMIN_PIN){S.admin=true;adminPanel()}else alert("Wrong passcode")}
+function adminPanel(){showM(`<h2>Admin – seller verification</h2><table><tr><th>Seller</th><th>Phone</th><th>Status</th><th></th></tr>
+${S.sellers.map(s=>`<tr><td>${esc(s.name)}</td><td>${esc(s.phone||"")}</td><td><span class="badge ${s.verified?'v':'u'}">${s.verified?"Verified":"Unverified"}</span></td>
+<td><button class="btn ${s.verified?'r':'g'}" onclick="tog(${s.id})">${s.verified?"Revoke":"Verify"}</button></td></tr>`).join("")}</table>
+<p><button class="btn o" onclick="S.admin=false;closeM()">Log out</button></p>`)}
+function tog(id){if(!S.admin)return;const s=S.sellers.find(x=>x.id==id);s.verified=!s.verified;save();render();adminPanel()}
+</script><script>
+/* ===== Backend layer: replaces localStorage with the Worker API ===== */
+let TOK=localStorage.getItem("rs_t")||"",ME=JSON.parse(localStorage.getItem("rs_u")||"null");
+S={sellers:[],products:[],reviews:[],admin:false,cat:"All"};save=()=>{};
+async function api(p,b){const r=await fetch("/api/"+p,{method:b?"POST":"GET",headers:{"content-type":"application/json",...(TOK?{authorization:"Bearer "+TOK}:{})},body:b?JSON.stringify(b):undefined});
+const j=await r.json().catch(()=>({}));if(!r.ok){if(r.status==401&&TOK&&!p.includes("login"))logout(true);throw new Error(j.error||"Request failed")}return j}
+async function refresh(){try{Object.assign(S,await api("state"))}catch(e){}S.admin=ME&&ME.role=="admin";render();navr()}
+function navr(){document.querySelector(".nav").innerHTML=ME?`<span class="mu">Hi, ${esc(ME.name)} (${ME.role})</span>`+(ME.role!="client"&&ME.role!="admin"?`<a onclick="openSell()">Sell</a>`:"")+(ME.role=="admin"?`<a onclick="adminPanel()">Admin</a>`:"")+`<a onclick="logout()">Logout</a>`:`<a onclick="authM('login')">Log in</a><a onclick="authM('reg')">Register</a>`}
+function setAuth(r){TOK=r.token;ME=r.user;localStorage.setItem("rs_t",TOK);localStorage.setItem("rs_u",JSON.stringify(ME))}
+function logout(q){TOK="";ME=null;localStorage.removeItem("rs_t");localStorage.removeItem("rs_u");if(!q)closeM();refresh()}
+function authM(m){showM(m=="login"?`<h2>Log in</h2><label>Email</label><input id="ae" type="email"><label>Password</label><input id="apw" type="password"><button class="btn" onclick="doLogin()">Log in</button> <a class="mu" onclick="authM('reg')" style="cursor:pointer">Create account</a>`
+:`<h2>Create account</h2><label>Full name / business name</label><input id="an"><label>Email</label><input id="ae" type="email"><label>Password (8+ characters)</label><input id="apw" type="password">
+<label>I want to join as</label><select id="ar" onchange="$('aph').style.display=this.value=='client'?'none':'block'"><option value="client">Client (buy)</option><option value="seller">Seller (sell)</option><option value="both">Both (buy &amp; sell)</option></select>
+<div id="aph" style="display:none"><label>Phone / M-Pesa number</label><input id="ap2" placeholder="+2547…"></div><button class="btn" onclick="doReg()">Register</button> <a class="mu" onclick="authM('login')" style="cursor:pointer">Have an account?</a>`)}
+async function doLogin(){try{setAuth(await api("login",{email:$("ae").value,password:$("apw").value}));closeM();refresh()}catch(e){alert(e.message)}}
+async function doReg(){try{await api("register",{name:$("an").value,email:$("ae").value,password:$("apw").value,role:$("ar").value,phone:$("ap2").value});setAuth(await api("login",{email:$("ae").value,password:$("apw").value}));closeM();refresh();if(ME.role!="client")alert("Account created. Your seller profile is NOT verified until an admin verifies it.")}catch(e){alert(e.message)}}
+/* hidden admin entry: open  /#staff  (no link anywhere in the UI) */
+openAdmin=function(){showM(`<h2>Staff sign-in</h2><input id="au" placeholder="Username" autocomplete="off"><input id="ap" type="password" placeholder="Password"><button class="btn" onclick="adLogin()">Sign in</button>`)};
+async function adLogin(){try{setAuth(await api("admin/login",{username:$("au").value,password:$("ap").value}));await refresh();adminPanel()}catch(e){alert(e.message)}}
+function chkHash(){if(location.hash=="#staff"){history.replaceState(null,"",location.pathname);ME&&ME.role=="admin"?adminPanel():openAdmin()}}
+addEventListener("hashchange",chkHash);
+adminPanel=function(){showM(`<h2>Admin – seller verification</h2><table><tr><th>Seller</th><th>Status</th><th></th></tr>${S.sellers.map(s=>`<tr><td>${esc(s.name)}</td><td><span class="badge ${s.verified?'v':'u'}">${s.verified?"Verified":"Unverified"}</span></td><td><button class="btn ${s.verified?'r':'g'}" onclick="tog(${s.id})">${s.verified?"Revoke":"Verify"}</button></td></tr>`).join("")}</table><p><button class="btn o" onclick="logout()">Sign out</button></p>`)};
+tog=async function(id){const s=S.sellers.find(x=>x.id==id);try{await api("admin/verify",{sellerId:id,verified:!s.verified});await refresh();adminPanel()}catch(e){alert(e.message)}};
+addRev=async function(id){const t=$("rt").value.trim();if(!ME){authM("login");return}if(!R||!t){alert("Please add stars and a written review.");return}
+try{await api("reviews",{pid:id,r:R,t});R=0;await refresh();openP(id)}catch(e){alert(e.message)}};
+openSell=function(){if(!ME||!/seller|both/.test(ME.role)){authM(ME?"login":"reg");if(ME)alert("Log in with a Seller or Both account to list items.");return}
+showM(`<h2>List an item</h2><label>Product / service name</label><input id="pn"><label>Category</label><select id="pc">${CATS.slice(1).map(c=>`<option>${c}</option>`).join("")}</select><label>Price (KSh)</label><input id="pp" type="number" min="1"><label>Description</label><textarea id="pd" rows="3"></textarea><button class="btn" onclick="addProd()">List item</button>`)};
+addProd=async function(){const em={"Phones & Tablets":"📱",Electronics:"🔌",Fashion:"👕","Home & Kitchen":"🏠",Beauty:"💄",Groceries:"🛒",Services:"🛠️"}[$("pc").value];
+try{await api("products",{n:$("pn").value,c:$("pc").value,p:$("pp").value,d:$("pd").value,e:em});closeM();refresh()}catch(e){alert(e.message)}};
+const _buy=buy;
+buy=async function(id){if(!ME||ME.role=="seller"){authM(ME?"login":"reg");alert("Please log in with a Client or Both account to contact sellers.");return}
+const p=S.products.find(x=>x.id==id);try{seller(p.s).phone=(await api("contact/"+p.s)).phone;_buy(id)}catch(e){alert(e.message)}};
+refresh();chkHash();
+</script>
+<div id="ib" style="display:none;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));background:#282828;color:#fff;border-radius:8px;padding:12px 14px;z-index:30;align-items:center;gap:10px;box-shadow:0 4px 16px rgba(0,0,0,.4)"><span style="flex:1;font-size:14px">Install RU Soko for faster shopping</span><button class="btn" id="ibb">Install</button><span onclick="this.parentNode.style.display='none'" style="cursor:pointer;font-size:22px;padding:0 4px">×</span></div>
+<div id="ob" style="display:none;position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;background:#c62828;color:#fff;text-align:center;font-size:13px;padding:4px;z-index:40">You're offline – showing saved listings</div>
+<script>
+if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));
+let dp;addEventListener("beforeinstallprompt",e=>{e.preventDefault();dp=e;if(!matchMedia("(display-mode: standalone)").matches)$("ib").style.display="flex"});
+$("ibb").onclick=async()=>{if(!dp)return;dp.prompt();await dp.userChoice;dp=null;$("ib").style.display="none"};
+addEventListener("appinstalled",()=>{$("ib").style.display="none"});
+const on=()=>$("ob").style.display=navigator.onLine?"none":"block";addEventListener("online",()=>{on();refresh()});addEventListener("offline",on);on();
+if(new URLSearchParams(location.search).get("action")=="sell")setTimeout(()=>openSell(),600);
+</script>
+</body></html>
